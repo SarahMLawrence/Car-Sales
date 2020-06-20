@@ -31,7 +31,7 @@ export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FEATURE:
       return {
-  //  additionalPrice: state.additionalPrice + state.price,
+  additionalPrice: state.additionalPrice + action.payload.price,
         car: {
           ...state.car,
           features: [...state.car.features, action.payload],
